@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Monkeytype Clone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Monkeytype Clone</h1>
+    <div id="theme-toggle">🌙</div>
+  </header>
+
+  <!-- MODE SELECT -->
+  <div id="mode-select">
+    <button class="mode" data-time="15">15s</button>
+    <button class="mode" data-time="30">30s</button>
+    <button class="mode" data-time="60">60s</button>
+
+    <button class="mode" data-mode="words" id="wordMode">Words</button>
+    <button class="mode" data-mode="quotes" id="quoteMode">Quotes</button>
+  </div>
+
+  <!-- TEST SCREEN -->
+  <div id="test-screen">
+
+    <div id="text-container">
+      <div id="caret"></div>
+      <p id="text"></p>
+    </div>
+
+    <textarea id="input" placeholder="Start typing..."></textarea>
+
+    <button id="start">Start</button>
+  </div>
+
+  <!-- RESULTS SCREEN -->
+  <div id="results-screen" class="hidden">
+    <h2>Results</h2>
+
+    <div id="stats">
+      <div class="stat"><span>Net WPM:</span> <b id="wpm"></b></div>
+      <div class="stat"><span>Raw WPM:</span> <b id="raw"></b></div>
+      <div class="stat"><span>Accuracy:</span> <b id="accuracy"></b></div>
+      <div class="stat"><span>Consistency:</span> <b id="consistency"></b></div>
+      <div class="stat"><span>Keystrokes:</span> <b id="keystrokes"></b></div>
+      <div class="stat"><span>Characters:</span> <b id="chars"></b></div>
+    </div>
+
+    <canvas id="graph" width="600" height="200"></canvas>
+
+    <h3>Your PB: <span id="pb"></span></h3>
+
+    <button id="restart">Restart</button>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
